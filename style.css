@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rowdies', cursive;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    position: relative;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header .navigation a{
+    color: rgb(61, 131, 65);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition-property: background; 
+}
+
+header .navigation a:not(:last-child){
+    margin-right: 30px;
+}
+
+header .navigation a:hover{
+    background: rgb(61, 131, 65);
+    color: #fff;    
+}
+
+.content {
+    /* max-width: 650px; */
+    margin: 60px 100px;
+}
+
+.content .info h1{
+    font-size: 70px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.content .info p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    color: #3d3d3d;
+}
+
+.content img{
+    
+    float: right;
+    
+}
+
+.content .info-btn{
+    color: #fff;
+    background-color: rgb(61, 131, 65);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.description{
+    margin-top: 200px;
+}
+
+.description img{
+    height: 350px;
+    width: 450px;
+    margin-left: 50px;
+    margin-right: 20px;
+    float: left;
+}
+
+.description .data h1{
+    font-size: 70px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.description .data{
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding: auto;
+    line-height: 1.7;
+    color: #3d3d3d;
+}
+
+.grid {
+    margin-top: 100px;
+    display: grid;
+    width: 82em;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start;
+}
+
+.grid-item{
+    background-color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.5s;
+} 
+
+.grid-item:hover{
+    transform: translate(0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img{
+    display: block;
+    width: 80%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 3rem;
+}
+
+.card-header{
+    font-size: 3rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 1.5rem;
+}
+
+.card-text{
+    font-size: 16px;
+    /* letter-spacing: 0.1rem; */
+    line-height: 1.7;
+    color: #3d3d3d;
+    margin-bottom: 2.5rem;
+}
+
+/* @media only screen and (max-width:96px){
+    .grid{
+        grid-gap: 3rem;
+    }
+} */
+
+
+.foot{
+    margin-top: 300px;
+}
+
+.foot .footer_img{
+    float: right;
+}
+
+.foot h1{
+    font-size: 70px;
+    color: black;
+    margin-bottom: 30px;
+    text-align: center; 
+    margin-left: 10px; 
+}
+
+.foot p{
+    text-align: center;
+    color: #3d3d3d;
+}
+
+.form{
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form .inputBox{
+    position: relative;
+    width: 250px;
+}
+
+.form .inputBox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+    color: rgb(61, 131, 65);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    font-weight: bold;
+    padding: 0 10px;
+    background: #fff;
+    border-left: 1px solid rgb(61, 131, 65);
+    border-right: 1px solid rgb(61, 131, 65);
+    letter-spacing: 0.2em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus{
+    border: 1px solid rgb(61, 131, 65);
+}
+
+.footer{
+    background-color: #3d3d3d;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_left .logo{
+    margin-top: 30px;
+    position: relative;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-left: 30px;
+    
+}
+
+.footer_right{
+    justify-content: center;
+    text-align: right;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
